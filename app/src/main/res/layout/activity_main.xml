@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="@null">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cardview_border" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/ig_story_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/ig_story_rounded_button" />
+
+            <RelativeLayout
+                android:id="@+id/ig_input_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ig_story_button"
+                android:layout_toStartOf="@+id/ig_functions_parent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <EditText
+                    android:id="@+id/ig_input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="Message..."
+                    android:maxLines="7"
+                    android:textColor="#262626"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText,OnClick"
+                    android:onClick="igInput"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ig_functions_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/ig_direct_functions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <ImageButton
+                        android:id="@+id/ig_micro_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ig_micro_button"
+                        android:onClick="igMicro"
+                        tools:ignore="OnClick" />
+
+                    <ImageButton
+                        android:id="@+id/ig_gallery_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/ig_micro_button"
+                        android:background="@drawable/ig_gallery_button"
+                        android:onClick="igGallery"
+                        tools:ignore="OnClick" />
+
+                    <ImageButton
+                        android:id="@+id/ig_gif_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/ig_gallery_button"
+                        android:background="@drawable/ig_gif_button"
+                        android:onClick="igGif"
+                        android:visibility="gone"
+                        tools:ignore="OnClick" />
+
+                    <ImageButton
+                        android:id="@+id/ig_like_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ig_gif_button"
+                        android:background="@drawable/ig_like_button"
+                        android:onClick="igLike"
+                        android:visibility="gone"
+                        tools:ignore="OnClick" />
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/ig_plus_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ig_direct_functions"
+                    android:background="@drawable/ig_plus_button"
+                    android:onClick="igPlus"
+                    tools:ignore="OnClick" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
